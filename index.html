@@ -40,20 +40,28 @@ Write with VSC + ADD Comment Anchors
 
 <div id="start">
   <h1>Per sapere il prezzo puscia sul buttun e rispondi all'interrogatorio!</h1>
-  <button onclick="interrogatorio()"><i>Buttun</i></button>
+  <button onclick="interrogatorio(); interrogatorio2()"><i>Buttun</i></button>
 </div>
 
 <div id="name"></div>
 
-<div id="km">
-  <span class="km-1"> </span>
-  <span class="km-2"></span>
-  </div>
+<div id="tessera"></div>
 
-<div id="eta">
-<span class="eta-1"> </span>
-<span class="eta-2"></span>
+<div id="eta"></div>
+
+<!-- NOTE si può inserire un ID all'interno di un DIV già "idizzato" -->
+
+<div id="km">
+  <!-- <span id="km1"></span> non funziona dentro al div -->
 </div>
+<div id="km1"></div>
+
+<!-- <div id="km-1"></div> non funziona -->
+<!-- <div class="km1"></div> non funziona-->
+ <!-- <span id="km1"></span> questo funziona-->
+
+
+
 
 
 
@@ -76,6 +84,6 @@ Write with VSC + ADD Comment Anchors
 
 
 
-<script rel="text/javascript"  src="main.js"></script>
+<script type="text/javascript"  src="main.js"></script>
 </body>
 </html>
