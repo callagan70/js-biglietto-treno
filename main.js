@@ -5,26 +5,27 @@ let anni = prompt ("In che anno sei nato?", 1970);
 let km = prompt ( "Quanti km vuoi fare?");
 
 if (name != null) {
-  document.getElementById("name").innerHTML =  "Ciao " + name + "!" + " Come te la passi oggi?";}
-  
+  result =`Ciao <i style='color:red; font-size: 32px; font-weight: 700'>${name} !</i> Come te la passi oggi?`;
+  document.getElementById("name").innerHTML = result;}
+
   anni = (2022 - anni)
-  
-  document.getElementById("eta").innerHTML = ("La tua età è di " + anni + " anni")
+  result =`La tua età è di <i style="color:red; font-size: 2em">${anni}</i> anni`;
+  document.getElementById("eta").innerHTML = result;
   
   let costo = (km * 0.21)
   
   document.getElementById("km").innerHTML = ("Il costo è di " + costo + "€" + " (0,21€ * " + km + "km)")
 
 if (anni < 18) {
-  document.getElementById("km1").innerHTML = "Ti invio....Il prezzo a te dedicato è di: " + ((costo / 100) *80) + "scontato del 20%";
+  document.getElementById("km1").innerHTML = `Ti invidio....Il prezzo a te dedicato è di: ${(costo / 100) * 80} scontato del 20%`;
 }
 
 else if (anni > 64){
-document.getElementById("km1").innerHTML = "Sconto dedicato a uno come te che ha lavorato e pagato le tasse tutta la vita è del 40%, indi paghi solo " + ((costo / 100) *60);
+document.getElementById("km1").innerHTML = `Sconto dedicato a uno come te che ha lavorato e pagato le tasse tutta la vita è del 40%, indi paghi solo ${(costo / 100) * 60}`;
 }
 
 else {
-  document.getElementById("km1").innerHTML = "Tu che non sei in pensione e non sei in pensione paghi il prezzo pieno: " + costo;
+  document.getElementById("km1").innerHTML = `Tu che non sei in pensione e non sei in pensione paghi il prezzo pieno: ${costo}`;
 }
 
 console.log (costo)
@@ -43,8 +44,6 @@ function interrogatorio2(){
   else if (tessera == "n")
   {document.getElementById("tessera").innerHTML = "Mi dispiace per te " + name + "!" + " non hai diritto ad un ulteriore sconto del 50%";}
 
-// NOTE come inserirele apici nel testo ' ' ? ho provato con UNICODE ma non funziona
-
   else {
-    alert("Hai sbagiato! riprova! Inserisci solo (s) o (n)"), interrogatorio2();}
+    alert("Hai sbagiato! riprova! Inserisci solo 's' o 'n' "), interrogatorio2();}
 }
