@@ -1,0 +1,1 @@
+// let km = prompt ( "quanti km vuoi fare?")
