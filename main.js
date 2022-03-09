@@ -31,6 +31,8 @@ console.log (costo)
 console.log (anni)
 }
 
+// NOTE come inserire le variabili in un secondo "function" 
+
 function interrogatorio2(){
   
   let tessera = prompt ("Sei uno studente o lavori in Boolean? (s/n)");
@@ -41,7 +43,8 @@ function interrogatorio2(){
   else if (tessera == "n")
   {document.getElementById("tessera").innerHTML = "Mi dispiace per te " + name + "!" + " non hai diritto ad un ulteriore sconto del 50%";}
 
-// FIXME come inserirele apici nel testo
+// NOTE come inserirele apici nel testo ' ' ? ho provato con UNICODE ma non funziona
+
   else {
     alert("Hai sbagiato! riprova! Inserisci solo (s) o (n)"), interrogatorio2();}
 }
